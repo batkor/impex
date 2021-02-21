@@ -1,0 +1,6 @@
+name: Import/Export (CSV,XLS,XLSX)
+type: module
+description: Provides functions for import and export data.
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9

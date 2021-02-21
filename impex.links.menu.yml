@@ -1,0 +1,6 @@
+impex.settings_form:
+  title: Import/Export (CSV,XLS,XLSX)
+  description: Configure Import/Export (CSV,XLS,XLSX).
+  parent: system.admin_config_system
+  route_name: impex.settings_form
+  weight: 10
