@@ -1,0 +1,7 @@
+impex.settings_form:
+  path: '/admin/config/system/impex'
+  defaults:
+    _title: 'impex settings'
+    _form: 'Drupal\impex\Form\SettingsForm'
+  requirements:
+    _permission: 'administer impex configuration'

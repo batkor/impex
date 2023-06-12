@@ -1,0 +1,4 @@
+administer impex configuration:
+  title: 'Administer impex configuration'
+  description: 'Optional description.'
+  restrict access: true

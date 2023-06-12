@@ -1,0 +1,32 @@
+services:
+  impex.file_manager:
+    class: Drupal\impex\ImpexFileManager
+    arguments:
+      - '@file_system'
+
+  impex.exporter:
+    class: Drupal\impex\Exporter
+    arguments:
+      - '@serializer'
+      - '@impex.file_manager'
+
+  impex.export.manager:
+    class: Drupal\impex\ExportManager
+    arguments:
+      - '@entity_type.manager'
+      - '@impex.exporter'
+
+  impex.import.manager:
+    class: Drupal\impex\ImportManager
+    arguments:
+      - '@entity_type.manager'
+      - '@impex.file_manager'
+      - '@serializer'
+      - '@event_dispatcher'
+
+  impex_event_subscriber:
+    class: Drupal\impex\EventSubscriber\ImpexEventSubscriber
+    arguments:
+      - '@impex.file_manager'
+    tags:
+      - { name: event_subscriber }

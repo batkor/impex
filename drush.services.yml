@@ -1,0 +1,5 @@
+services:
+  impex.commands:
+    class: Drupal\impex\Commands\ImpexCommands
+    tags:
+      - { name: drush.command }

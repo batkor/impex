@@ -1,0 +1,22 @@
+{
+    "name": "batkor/impex",
+    "description": "This extension provides new commands for Drush.",
+    "type": "drupal-drush",
+    "authors": [
+        {
+            "name": "batkor",
+            "email": "info@batkor.ru"
+        }
+    ],
+    "require": {
+        "ext-json": "*",
+        "php": ">=7.0"
+    },
+    "extra": {
+        "drush": {
+            "services": {
+                "drush.services.yml": "^9"
+            }
+        }
+    }
+}
